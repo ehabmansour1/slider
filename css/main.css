@@ -1,0 +1,131 @@
+/* start variables */
+:root {
+  --main-color: ;
+}
+/* end variables */
+
+/* start global rules */
+* {
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* End Global Rules */
+.slider {
+  width: 600px;
+  margin: 30px auto;
+  position: relative;
+  max-width: 100%;
+}
+.slider img {
+  max-width: 100%;
+  width: 600px;
+  height: 220px;
+  object-fit: fill;
+}
+.slider li {
+  display: none;
+}
+.slider .list .active {
+  display: block !important;
+  animation: blink 0.3s forwards;
+  -webkit-animation: blink 0.3s forwards;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.controls i {
+  position: absolute;
+  top: 0%;
+  cursor: pointer;
+  height: 98%;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 19px;
+  transition-duration: 0.3s;
+}
+.controls i:hover {
+  background-color: rgba(0, 0, 0, 0.158);
+}
+.fa-angle-right {
+  right: 0px;
+}
+.fa-angle-left {
+  left: 0px;
+}
+.indictor {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.indictor > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+.indictor div span:first-child {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: rgba(95, 158, 160, 0.514);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.indictor div span {
+  width: fit-content;
+}
+.indictor .active span:first-child {
+  background-color: rgb(27, 91, 94)
+}
